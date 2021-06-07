@@ -115,5 +115,61 @@
   width:70%;
 }
 
+.aaaaa{
+  height: 100vh;
+}
+.aaaab{
+  margin-top: 7.5%;
+  height: 70%;
+  display: flex;
+}
+.aaaac{
+  width: 30%;
+  margin-left: 10%
+}
+.aaaad{
+  width: 50%;
+  margin-left: 5%
+}
+.aaaae{
+  width: 20%;
+  margin-left: 5%;
+  margin-right: 10%;
+}
+.aaaaf,.aaaah{
+  display: flex;
+  flex-direction: column;
+}
+.aaaag{
+  border:1px solid black;
+  height: 90.3%;
+}
+.aaaam{
+  display: flex;
+  flex-direction: column;
+}
+
+.aaaan{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+}
+.aaaai,.aaaak,.aaaal{
+  display: flex;
+  flex-direction: column;
+}
+.aaaaj{
+  border:1px black solid;
+  height: 77%;
+}
+.aaaao{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10%;
+}
+
+
+
+
 
 

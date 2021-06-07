@@ -20,7 +20,7 @@ class Gestion_mdp_2 extends React.Component {
 
 	submitHandler = (e) => {
 		e.preventDefault()
-        axios.post('http://127.0.0.1:1201/connexion5',{adresse_mail:this.state.adresse_mail,code:this.state.code,nouveau_mdp:this.state.nouveau_mdp})
+        axios.post('http://127.0.0.1:1161/connexion5',{adresse_mail:this.state.adresse_mail,code:this.state.code,nouveau_mdp:this.state.nouveau_mdp})
             .then(response => {
                 if(response.status === 200){
                     this.setState({"message_retour_api":response.data.retour})

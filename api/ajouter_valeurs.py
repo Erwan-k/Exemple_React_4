@@ -46,3 +46,39 @@ def ajouter_Changer_de_mdp_code(adresse_mail,code,mycursor,mydb):
 		return {"statut":False,"erreur":"pas reussi a commit"}
 	return {"statut":True}
 
+def ajouter_Conversation(id_conv,nom,mycursor,mydb):
+	val = (id_conv,nom)
+	try:
+		mycursor.execute("INSERT INTO Conversation (id_conv,nom) VALUES ("+",".join(["%s"]*len(val))+")", val)
+	except Exception as e:
+		return {"statut":False,"erreur":"pas reussi a insert into"}
+	try:
+		mydb.commit()
+	except:
+		return {"statut":False,"erreur":"pas reussi a commit"}
+	return {"statut":True}
+
+def ajouter_Messages(id_conversation,ref_envoyeur,message,date,mycursor,mydb):
+	val = (id_conversation,ref_envoyeur,message,date)
+	try:
+		mycursor.execute("INSERT INTO Messages (id_conversation,ref_envoyeur,message,date) VALUES ("+",".join(["%s"]*len(val))+")", val)
+	except Exception as e:
+		return {"statut":False,"erreur":"pas reussi a insert into"}
+	try:
+		mydb.commit()
+	except:
+		return {"statut":False,"erreur":"pas reussi a commit"}
+	return {"statut":True}
+
+def ajouter_Relation_conv_membre(id_conv,id_membre,mycursor,mydb):
+	val = (id_conv,id_membre)
+	try:
+		mycursor.execute("INSERT INTO Relation_conv_membre (id_conv,id_membre) VALUES ("+",".join(["%s"]*len(val))+")", val)
+	except Exception as e:
+		return {"statut":False,"erreur":"pas reussi a insert into"}
+	try:
+		mydb.commit()
+	except:
+		return {"statut":False,"erreur":"pas reussi a commit"}
+	return {"statut":True}
+

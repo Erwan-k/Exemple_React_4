@@ -19,7 +19,7 @@ class Verif_mail_2 extends React.Component {
 
     submitHandler = (e) => {
         e.preventDefault()
-        axios.post('http://127.0.0.1:1201/connexion2',{adresse_mail:this.state.adresse_mail,code:this.state.code})
+        axios.post('http://127.0.0.1:1161/connexion2',{adresse_mail:this.state.adresse_mail,code:this.state.code})
             .then(response => {
                 if(response.status === 200){
                     this.setState({"message_retour_api":response.data.retour})

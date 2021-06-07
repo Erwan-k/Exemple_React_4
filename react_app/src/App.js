@@ -5,7 +5,7 @@ import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 import Login_page from "./components/Login_page.js";
 import Gestion_mdp from "./components/Gestion_mdp.js";
 import Verif_mail from "./components/Verif_mail.js";
-import Page_principale from "./components/page_principale.js";
+import Page_principale from "./components/Page_principale.js";
 
 class App extends React.Component {
 constructor(){

@@ -2,16 +2,16 @@ version: '3.3'
 services:
     api:
       build: ./api
-      image: erwankerbrat/react_exemple_gestion_de_logs_api
+      image: erwankerbrat/react_exemple_messagerie_api
       ports:
-        - "1201:5000" 
+        - "1161:5000" 
       environment:
         DATABASE_URL: "mysql://root:rootpassword@db:3306/db_test"
-#    react_app_user:
-#      build: ./react_app
-#      image: erwankerbrat/react_exemple_gestion_de_logs_react_app
-#      ports:
-#        - "1203:3000" 
+    react_app_user:
+      build: ./react_app
+      image: erwankerbrat/react_exemple_gestion_de_logs_react_app
+      ports:
+        - "1162:3000" 
     db:
       image: mysql:5.7
       volumes:
@@ -30,4 +30,4 @@ services:
           PMA_USER: root 
           PMA_PASSWORD: rootpassword 
       ports:
-        - "1202:80" 
+        - "1163:80" 
